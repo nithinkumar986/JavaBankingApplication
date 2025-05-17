@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
     private static int accountCounter = 100;
 
     private static String generateAccountNumber() {
@@ -36,7 +36,7 @@ public class Main {
                     double deposit = scanner.nextDouble();
 
                     String accNumber = generateAccountNumber();
-                    Account account = null;
+                    Account account;
 
                     switch (accType) {
                         case 1: account = new SavingAccount(accNumber, name, deposit); break;
